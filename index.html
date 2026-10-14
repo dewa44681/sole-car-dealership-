@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sole Car Dealership in Awasa, Ethiopia. Discover quality vehicles and contact us for details.">
+  <title>Sole Car Dealership | ሶል መኪና መሸጫ</title>
+  <style>
+    :root {
+      --red: #e5232e;
+      --dark: #111318;
+      --muted: #686b73;
+      --light: #f5f5f6;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans Ethiopic", sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+
+    .topbar {
+      background: var(--dark);
+      color: white;
+      padding: 9px 6%;
+      text-align: center;
+      font-size: 13px;
+    }
+    header {
+      padding: 17px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 5;
+    }
+    .logo { font-size: 23px; font-weight: 900; }
+    .logo span { color: var(--red); }
+    nav { display: flex; align-items: center; gap: 20px; }
+    nav a { font-size: 14px; font-weight: 600; }
+    .lang {
+      border: 1px solid #ddd;
+      background: white;
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-weight: 700;
+    }
+    .hero {
+      padding: 80px 6%;
+      background: linear-gradient(110deg, #111318 0%, #24262c 65%, #3a171b 100%);
+      color: white;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 30px;
+      min-height: 430px;
+    }
+    .eyebrow {
+      color: #ff6971;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+    h1 { font-size: clamp(36px, 5vw, 60px); line-height: 1.12; margin: 15px 0; }
+    .hero p { color: #d5d5d8; max-width: 510px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 7px;
+      background: var(--red);
+      color: white;
+      padding: 13px 18px;
+      font-weight: 800;
+    }
+    .btn.outline { background: transparent; border: 1px solid #888; }
+    .hero-image {
+      width: 100%;
+      min-height: 230px;
+      object-fit: cover;
+      border-radius: 14px;
+      background: #292b30;
+    }
+    section { padding: 65px 6%; }
+    .section-head { text-align: center; margin-bottom: 30px; }
+    .section-head h2 { font-size: 32px; margin: 0 0 8px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .cars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .car {
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 20px #00000008;
+    }
+    .car img { width: 100%; height: 190px; object-fit: cover; display: block; background: #eee; }
+    .car-body { padding: 18px; }
+    .car h3 { margin: 0 0 8px; font-size: 20px; }
+    .car p { color: var(--muted); font-size: 14px; }
+    .price { color: var(--red); font-size: 20px; font-weight: 900; }
+    .note { font-size: 12px; color: var(--muted); }
+    .about { background: var(--light); }
+    .about-inner {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+    .contact {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+    }
+    .contact p { color: #d0d0d3; }
+    footer {
+      background: #090a0d;
+      color: #bbb;
+      text-align: center;
+      padding: 22px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      header { padding: 13px 5%; flex-wrap: wrap; }
+      .logo { font-size: 20px; }
+      nav { width: 100%; justify-content: space-between; gap: 8px; }
+      nav a { font-size: 12px; }
+      .hero { padding: 55px 6%; grid-template-columns: 1fr; }
+      .hero-image { min-height: 180px; }
+      section { padding: 48px 5%; }
+      .cars { grid-template-columns: 1fr; }
+      .car img { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar" data-en="Your trusted car dealership in Awasa, Ethiopia" data-am="በአዋሳ የሚገኘው ታማኝ የመኪና መሸጫዎ">Your trusted car dealership in Awasa, Ethiopia</div>
+
+  <header>
+    <a class="logo" href="#">SOLE<span>.</span> CARS</a>
+    <nav>
+      <a href="#home" data-en="Home" data-am="መነሻ">Home</a>
+      <a href="#cars" data-en="Cars" data-am="መኪናዎች">Cars</a>
+      <a href="#about" data-en="About" data-am="ስለ እኛ">About</a>
+      <a href="#contact" data-en="Contact" data-am="ያግኙን">Contact</a>
+      <button class="lang" id="langBtn" type="button">አማ</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow" data-en="WELCOME TO SOLE CARS" data-am="ወደ ሶል መኪና መሸጫ እንኳን በደህና መጡ">WELCOME TO SOLE CARS</div>
+        <h1 data-en="Find the car that moves you." data-am="ለእርስዎ የሚስማማውን መኪና ያግኙ።">Find the car that moves you.</h1>
+        <p data-en="Explore our vehicle collection and talk to our team for details, prices, and availability." data-am="የመኪና ምርጫችንን ይመልከቱ፤ ስለ ዋጋ፣ መገኘት እና ዝርዝር መረጃ ከቡድናችን ጋር ይገናኙ።">Explore our vehicle collection and talk to our team for details, prices, and availability.</p>
+        <div class="actions">
+          <a class="btn" href="#cars" data-en="Explore Cars" data-am="መኪናዎችን ይመልከቱ">Explore Cars</a>
+          <a class="btn outline" href="#contact" data-en="Contact Us" data-am="ያግኙን">Contact Us</a>
+        </div>
+      </div>
+      <img class="hero-image" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85" alt="Car at Sole Car Dealership">
+    </section>
+
+    <section id="cars">
+      <div class="section-head">
+        <h2 data-en="Featured Vehicles" data-am="ተመራጭ መኪናዎች">Featured Vehicles</h2>
+        <p data-en="A first look at the cars we can help you find." data-am="ልናግዝዎ የምንችላቸውን መኪናዎች ይመልከቱ።">A first look at the cars we can help you find.</p>
+      </div>
+      <div class="cars">
+        <article class="car">
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Red sports car">
+          <div class="car-body">
+            <h3 data-en="Premium Sedan" data-am="ፕሪሚየም ሴዳን">Premium Sedan</h3>
+            <p data-en="Comfortable style for everyday driving." data-am="ለዕለታዊ ጉዞ ምቹና ውብ መኪና።">Comfortable style for everyday driving.</p>
+            <div class="price" data-en="Ask for price" data-am="ዋጋውን ይጠይቁ">Ask for price</div>
+          </div>
+        </article>
+        <article class="car">
+          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80" alt="SUV vehicle">
+          <div class="car-body">
+            <h3 data-en="Family SUV" data-am="የቤተሰብ SUV">Family SUV</h3>
+            <p data-en="Extra room for family and travel." data-am="ለቤተሰብና ለጉዞ ተጨማሪ ምቾት።">Extra room for family and travel.</p>
+            <div class="price" data-en="Ask for price" data-am="ዋጋውን ይጠይቁ">Ask for price</div>
+          </div>
+        </article>
+        <article class="car">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Luxury coupe">
+          <div class="car-body">
+            <h3 data-en="Luxury Collection" data-am="የቅንጦት መኪናዎች">Luxury Collection</h3>
+            <p data-en="Discover a vehicle that matches your taste." data-am="ከፍላጎትዎ ጋር የሚስማማ መኪና ያግኙ።">Discover a vehicle that matches your taste.</p>
+            <div class="price" data-en="Ask for price" data-am="ዋጋውን ይጠይቁ">Ask for price</div>
+          </div>
+        </article>
+      </div>
+      <p class="note" style="text-align:center;margin-top:22px" data-en="Sample display only. Confirm actual inventory and prices with Sole Cars." data-am="ይህ ለማሳያ ብቻ ነው። ትክክለኛ የመኪና ዝርዝርና ዋጋ ከሶል መኪና መሸጫ ያረጋግጡ።">Sample display only. Confirm actual inventory and prices with Sole Cars.</p>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-inner">
+        <h2 data-en="Why Choose Sole Cars?" data-am="ለምን ሶል መኪና መሸጫን ይመርጣሉ?">Why Choose Sole Cars?</h2>
+        <p data-en="We help customers explore vehicle options and connect with our team for clear information. Visit us in Awasa to discuss your needs." data-am="ደንበኞች የመኪና ምርጫዎችን እንዲያዩና ግልጽ መረጃ እንዲያገኙ እናግዛለን። ፍላጎትዎን ለመወያየት በአዋሳ ይጎብኙን።">We help customers explore vehicle options and connect with our team for clear information. Visit us in Awasa to discuss your needs.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 data-en="Ready to Find Your Next Car?" data-am="ቀጣዩን መኪናዎን ለማግኘት ዝግጁ ነዎት?">Ready to Find Your Next Car?</h2>
+      <p data-en="Contact Sole Car Dealership in Awasa, Ethiopia." data-am="በአዋሳ ኢትዮጵያ የሚገኘውን ሶል መኪና መሸጫ ያግኙ።">Contact Sole Car Dealership in Awasa, Ethiopia.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn" href="https://wa.me/" target="_blank" rel="noopener" data-en="WhatsApp Us" data-am="በዋትስአፕ ያግኙን">WhatsApp Us</a>
+        <a class="btn outline" href="https://www.google.com/maps/search/car+dealership+Awasa+Ethiopia" target="_blank" rel="noopener" data-en="Find Us in Awasa" data-am="በአዋሳ ያግኙን">Find Us in Awasa</a>
+      </div>
+      <p class="note" data-en="Replace the WhatsApp link with the dealership's real phone number before publishing." data-am="ድረ-ገጹን ከማተምዎ በፊት የዋትስአፕ አገናኙን በእውነተኛው የመሸጫው ስልክ ቁጥር ይቀይሩ።">Replace the WhatsApp link with the dealership's real phone number before publishing.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span data-en="© 2026 Sole Car Dealership. Awasa, Ethiopia." data-am="© 2026 ሶል መኪና መሸጫ። አዋሳ፣ ኢትዮጵያ።">© 2026 Sole Car Dealership. Awasa, Ethiopia.</span>
+  </footer>
+
+  <script>
+    let language = "en";
+    const langBtn = document.getElementById("langBtn");
+
+    langBtn.addEventListener("click", function () {
+      language = language === "en" ? "am" : "en";
+      document.documentElement.lang = language;
+
+      document.querySelectorAll("[data-en][data-am]").forEach(function (element) {
+        element.textContent = element.getAttribute("data-" + language);
+      });
+
+      langBtn.textContent = language === "en" ? "አማ" : "EN";
+    });
+  </script>
+</body>
+  </html>
+          
